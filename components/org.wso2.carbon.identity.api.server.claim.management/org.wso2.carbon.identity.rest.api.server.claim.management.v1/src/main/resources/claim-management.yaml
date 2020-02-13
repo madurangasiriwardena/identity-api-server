@@ -812,5 +812,5 @@ responses:
   Forbidden:
     description: Resource Forbidden.
 
-host: is.wso2.com
+host: localhost:9443
 basePath: /t/{tenant-domain}/api/server/v1
