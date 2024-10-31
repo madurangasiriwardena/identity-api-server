@@ -20,7 +20,6 @@ package org.wso2.carbon.identity.api.expired.password.identification.v1.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.wso2.carbon.identity.api.expired.password.identification.common.ContextLoader;
-import org.wso2.carbon.identity.api.expired.password.identification.v1.PasswordExpiredUsersApiService;
 import org.wso2.carbon.identity.api.expired.password.identification.v1.core.PasswordExpiredUsersManagementApiService;
 
 import javax.ws.rs.core.Response;
@@ -28,12 +27,11 @@ import javax.ws.rs.core.Response;
 /**
  * Implementation of the password expired User retrieval API Service.
  */
-public class PasswordExpiredUsersApiServiceImpl implements PasswordExpiredUsersApiService {
+public class PasswordExpiredUsersApiServiceImpl {
 
     @Autowired
     private PasswordExpiredUsersManagementApiService passwordExpiredUsersManagementApiService;
 
-    @Override
     public Response getPasswordExpiredUsers(String expiredAfter, String excludeAfter) {
 
         String tenantDomain = ContextLoader.getTenantDomainFromContext();

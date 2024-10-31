@@ -24,3 +24,12 @@
 #docs/*.md
 # Then explicitly reverse the ignore rule for a single file:
 #!docs/README.md
+
+**/RestApplication.java
+**/RestResourceRoot.java
+
+**/openapi/openapi.yaml
+**/webapp/WEB-INF/beans.xml
+**/webapp/WEB-INF/web.xml
+
+README.md

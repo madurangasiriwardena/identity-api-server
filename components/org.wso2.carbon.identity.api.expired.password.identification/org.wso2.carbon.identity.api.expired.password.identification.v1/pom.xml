@@ -34,7 +34,7 @@
             <!--<plugin>
                   <groupId>org.openapitools</groupId>
                   <artifactId>openapi-generator-maven-plugin</artifactId>
-                  <version>4.1.2</version>
+                  <version>7.9.0</version>
                   <executions>
                       <execution>
                           <goals>
@@ -42,9 +42,10 @@
                           </goals>
                           <configuration>
                               <inputSpec>${project.basedir}/src/main/resources/ExpiredPasswordIdentification.yaml</inputSpec>
-                              <generatorName>org.wso2.carbon.codegen.CxfWso2Generator</generatorName>
+                              <generatorName>org.openapitools.codegen.languages.JavaJAXRSSpecServerCodegen</generatorName>
                               <configOptions>
                                   <sourceFolder>src/gen/java</sourceFolder>
+                                  <generatePom>false</generatePom>
                                   <apiPackage>org.wso2.carbon.identity.api.expired.password.identification.v1</apiPackage>
                                   <modelPackage>org.wso2.carbon.identity.api.expired.password.identification.v1.model</modelPackage>
                                   <packageName>org.wso2.carbon.identity.api.expired.password.identification.v1</packageName>
@@ -52,18 +53,12 @@
                                   <hideGenerationTimestamp>true</hideGenerationTimestamp>
                                   <ignoreFileOverride>${project.basedir}/.openapi-generator-ignore</ignoreFileOverride>
                               </configOptions>
+                              <templateDirectory>${project.basedir}/../../../resources/templates</templateDirectory>
                               <output>.</output>
                               <skipOverwrite>false</skipOverwrite>
                           </configuration>
                       </execution>
                   </executions>
-                  <dependencies>
-                      <dependency>
-                          <groupId>org.openapitools</groupId>
-                          <artifactId>cxf-wso2-openapi-generator</artifactId>
-                          <version>1.0.0</version>
-                      </dependency>
-                  </dependencies>
             </plugin>-->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
